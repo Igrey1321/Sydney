@@ -1,0 +1,63 @@
+$(document).ready(function(){
+    $(".slide-one").owlCarousel({
+        loop:true,
+        autoplay:true,
+        autoplaySpeed:true,
+        margin:10,
+        nav:true,
+        items:1,
+        dots:false,
+    });
+    $(".slide-two").owlCarousel({
+        nav:true,
+        loop:true,
+        margin:30,
+        responsiveClass:true,
+        dots:false,
+        navText:false,
+        responsive:{
+            0:{
+                items:1,
+                stagePadding:10,
+                dots:true,
+                nav:false,
+            },
+            768:{
+                items:2,
+                nav:false,
+            },
+            1293:{
+                items:3,
+                margin:5,
+            }
+        }
+    });
+    $(".slide-three").owlCarousel({
+        nav:true,
+        loop:true,
+        margin:30,
+        dots:false,
+        navText:false,
+        responsiveClass:true,
+        responsive:{
+            0:{
+                items:1,
+                stagePadding:10,
+                dots:true,
+                nav:false,
+            },
+            768:{
+                items:2,
+
+            },
+            1293:{
+                items:3,
+                margin:5,
+            }
+        }
+    });
+});
+$(".navbar-toggler").click(function(){
+    $(".header").toggleClass("header_click");
+    $(".navbar").toggleClass("navbar_logo_click");
+});
